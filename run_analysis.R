@@ -13,20 +13,14 @@ subject_train <- read.table("./train/subject_train.txt")
 x_test <- read.table("./test/X_test.txt")
 y_test <- read.table("./test/y_test.txt")
 subject_test <- read.table("./test/subject_test.txt")
-# Read in the activities and the features
+# Read in the  features
 features <- read.table("features.txt")
-
-
-# Combine the training datasets together
-#trainingDf <- cbind(subject_train, y_train,x_train)
-
-# Combine the test datasets together
-#testDf <- cbind(subject_test,y_test, x_test)
 
 # Merge the training and test tables
 trainingAndTestDf <- rbind(x_train, x_test)
 activityDf <- rbind(y_train, y_test)
 subjectDf <- rbind(subject_train, subject_test)
+# Apply the more descriptive names to the columns
 colnames(trainingAndTestDf) <- features[,2]
 
 ## Step 2
@@ -44,7 +38,7 @@ trainingAndTestDf <- trainingAndTestDf[,meanAndSdColumns]
 activity_labels <- read.table("activity_labels.txt")
 # Merge the activity training and test tables
 activityDf <- rbind(y_train, y_test)
-# Apply the activity labels to the activity
+# Apply the activity labels to the activity data set
 activityDf[,1] <- activity_labels[activityDf[,1],2]
 
 ## Step 4
@@ -53,7 +47,7 @@ activityDf[,1] <- activity_labels[activityDf[,1],2]
 # Set the labels for the data set with the descriptive variable names
 colnames(subjectDf) <- "subject"
 colnames(activityDf) <- "activity"
-# Merge the subject, activity and training/test data tables
+# Merge the subject, activity and training/test data tables (the desriptive labels have already been applied in step 1)
 trainingAndTestDf <-
     cbind(subjectDf, activityDf, trainingAndTestDf)
 
@@ -65,4 +59,4 @@ trainingAndTestDf <-
 tidyDataset <-
     trainingAndTestDf %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 # Write the new tidy data set to a new file.
-write.table(tidyDataset, './tidyData.txt',row.names = FALSE);
+write.table(tidyDataset, './tidyData.txt',row.names = FALSE)

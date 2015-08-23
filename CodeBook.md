@@ -1,6 +1,7 @@
 # Codebook
 This codebook summarises the data fields in 'tidy.txt'.
 
+## Introduction
 The features selected for this dataset come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -12,89 +13,90 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The features are normalized and bounded within [-1,1] and therefore unitless.
 
+## Variables
 This tidy data set took only the mean and standard deviation variables from this data.  The average of each variable, for each activity and each subject was calculated and included in the final tidy data set.
 
 Here is the list of variables included in this tidy data set:
-subjectId - an identifier of the subject who carried out the experiment
-activity - the activity of the subject carrying out the test (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-tBodyAccMeanX 
-tBodyAccMeanY 
-tBodyAccMeanZ
-tBodyAccStdX 
-tBodyAccStdY
-tBodyAccStdZ
-tGravityAccMeanX
-tGravityAccMeanY
-tGravityAccMeanZ
-tGravityAccStdX
-tGravityAccStdY
-tGravityAccStdZ
-tBodyAccJerkMeanX
-tBodyAccJerkMeanY 
-tBodyAccJerkMeanZ 
-tBodyAccJerkStdX 
-tBodyAccJerkStdY
-tBodyAccJerkStdZ
-tBodyGyroMeanX 
-tBodyGyroMeanY
-tBodyGyroMeanZ 
-tBodyGyroStdX 
-tBodyGyroStdY 
-tBodyGyroStdZ 
-tBodyGyroJerkMeanX 
-tBodyGyroJerkMeanY
-tBodyGyroJerkMeanZ
-tBodyGyroJerkStdX
-tBodyGyroJerkStdY
-tBodyGyroJerkStdZ
-tBodyAccMagMean
-tBodyAccMagStd
-tGravityAccMagMean
-tGravityAccMagStd
-tBodyAccJerkMagMean
-tBodyAccJerkMagStd
-tBodyGyroMagMean
-tBodyGyroMagStd
-tBodyGyroJerkMagMean
-tBodyGyroJerkMagStd
-fBodyAccMeanX
-fBodyAccMeanY
-fBodyAccMeanZ
-fBodyAccStdX
-fBodyAccStdY
-fBodyAccStdZ
-fBodyAccMeanFreqX
-fBodyAccMeanFreqY
-fBodyAccMeanFreqZ
-fBodyAccJerkMeanX
-fBodyAccJerkMeanY
-fBodyAccJerkMeanZ
-fBodyAccJerkStdX
-fBodyAccJerkStdY
-fBodyAccJerkStdZ
-fBodyAccJerkMeanFreqX
-fBodyAccJerkMeanFreqY
-fBodyAccJerkMeanFreqZ
-fBodyGyroMeanX
-fBodyGyroMeanY
-fBodyGyroMeanZ
-fBodyGyroStdX
-fBodyGyroStdY
-fBodyGyroStdZ
-fBodyGyroMeanFreqX
-fBodyGyroMeanFreqY
-fBodyGyroMeanFreqZ
-fBodyAccMagMean
-fBodyAccMagStd
-fBodyAccMagMeanFreq
-fBodyBodyAccJerkMagMean
-fBodyBodyAccJerkMagStd
-fBodyBodyAccJerkMagMeanFreq
-fBodyBodyGyroMagMean
-fBodyBodyGyroMagStd
-fBodyBodyGyroMagMeanFreq
-fBodyBodyGyroJerkMagMean
-fBodyBodyGyroJerkMagStd
-fBodyBodyGyroJerkMagMeanFreq
+* 'subjectId - an identifier of the subject who carried out the experiment'
+* 'activity - the activity of the subject carrying out the test (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)'
+* 'tBodyAccMeanX'
+* 'tBodyAccMeanY' 
+* 'tBodyAccMeanZ'
+* 'tBodyAccStdX' 
+* 'tBodyAccStdY'
+* 'tBodyAccStdZ'
+* 'tGravityAccMeanX'
+* 'tGravityAccMeanY'
+* 'tGravityAccMeanZ'
+* 'tGravityAccStdX'
+* 'tGravityAccStdY'
+* 'tGravityAccStdZ'
+* 'tBodyAccJerkMeanX'
+* 'tBodyAccJerkMeanY' 
+* 'tBodyAccJerkMeanZ' 
+* 'tBodyAccJerkStdX' 
+* 'tBodyAccJerkStdY'
+* 'tBodyAccJerkStdZ'
+* 'tBodyGyroMeanX' 
+* 'tBodyGyroMeanY'
+* 'tBodyGyroMeanZ'
+* 'tBodyGyroStdX' 
+* 'tBodyGyroStdY'
+* 'tBodyGyroStdZ' 
+* 'tBodyGyroJerkMeanX' 
+* 'tBodyGyroJerkMeanY'
+* 'tBodyGyroJerkMeanZ'
+* 'tBodyGyroJerkStdX'
+* 'tBodyGyroJerkStdY'
+* 'tBodyGyroJerkStdZ'
+* 'tBodyAccMagMean'
+* 'tBodyAccMagStd'
+* 'tGravityAccMagMean'
+* 'tGravityAccMagStd'
+* 'tBodyAccJerkMagMean'
+* 'tBodyAccJerkMagStd'
+* 'tBodyGyroMagMean'
+* 'tBodyGyroMagStd'
+* 'tBodyGyroJerkMagMean'
+* 'tBodyGyroJerkMagStd'
+* 'fBodyAccMeanX'
+* 'fBodyAccMeanY'
+* 'fBodyAccMeanZ'
+* 'fBodyAccStdX'
+* 'fBodyAccStdY'
+* 'fBodyAccStdZ'
+* 'fBodyAccMeanFreqX'
+* 'fBodyAccMeanFreqY'
+* 'fBodyAccMeanFreqZ'
+* 'fBodyAccJerkMeanX'
+* 'fBodyAccJerkMeanY'
+* 'fBodyAccJerkMeanZ'
+* 'fBodyAccJerkStdX'
+* 'fBodyAccJerkStdY'
+* 'fBodyAccJerkStdZ'
+* 'fBodyAccJerkMeanFreqX'
+* 'fBodyAccJerkMeanFreqY'
+* 'fBodyAccJerkMeanFreqZ'
+* 'fBodyGyroMeanX'
+* 'fBodyGyroMeanY'
+* 'fBodyGyroMeanZ'
+* 'fBodyGyroStdX'
+* 'fBodyGyroStdY'
+* 'fBodyGyroStdZ'
+* 'fBodyGyroMeanFreqX'
+* 'fBodyGyroMeanFreqY'
+* 'fBodyGyroMeanFreqZ'
+* 'fBodyAccMagMean'
+* 'fBodyAccMagStd'
+* 'fBodyAccMagMeanFreq'
+* 'fBodyBodyAccJerkMagMean'
+* 'fBodyBodyAccJerkMagStd'
+* 'fBodyBodyAccJerkMagMeanFreq'
+* 'fBodyBodyGyroMagMean'
+* 'fBodyBodyGyroMagStd'
+* 'fBodyBodyGyroMagMeanFreq'
+* 'fBodyBodyGyroJerkMagMean'
+* 'fBodyBodyGyroJerkMagStd'
+* 'fBodyBodyGyroJerkMagMeanFreq'
 
 
